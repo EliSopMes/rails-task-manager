@@ -1,11 +1,19 @@
-<h2></h2>
+<div class="container" style="text-align:left; width: 1000px; border-bottom: 1px solid grey;">
+  <h2 style="font-size: 50px; padding: 30px;"> <strong>New task</strong></h2>
 
-<%= form_with model: @task do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.submit %>
-<% end %>
-
-<p> <%= link_to "Back to list", tasks_path %> </p>
+  <%= form_with model: @task do |f| %>
+    <%= f.label :title, style:"margin-left:60px; font-size:30px;"%>
+    <%= f.text_field :title, style:"width:800px; margin-left:10px; height:40px; font-size:25px;" %>
+    <br>
+    <br>
+    <%= f.label :details, style:"margin-left:30px; font-size:30px;" %>
+    <%= f.text_field :details, style:"width:800px; margin-left:10px; height:40px; font-size:25px;" %>
+    <br>
+    <br>
+    <br>
+    <%= f.submit "+ add task", class:"btn btn-primary btn-lg", style:"margin-left:30px; width: 160px;" %>
+    <br>
+    <br>
+  <% end %>
+</div>
+<%= link_to "← back to list", root_path, class:"btn btn-outline-primary btn-lg", style:"width: 160px; margin-left:263px; margin-top:20px;"%>

@@ -1,8 +1,10 @@
-<h2> <%= @task.title %> </h2>
+<div class="container" style="text-align:left; width: 1000px; border-bottom: 1px solid grey;">
+  <h2 style="font-size: 50px; padding: 30px;"> <strong><%= @task.title %></strong></h2>
 
-<p> <%= @task.details %> </p>
-<p> Completed: <%= @task.completed %> </p>
+  <p style="width:800px; height:100px; margin-left:30px; font-size:23px;", class="bg-success p-2 text-dark bg-opacity-25"> <%= @task.details %> </p>
+  <p style="margin-left:30px; font-size:23px;"><input type="checkbox" <%= @task.completed? ? "checked" : "unchecked"%>, style="width:18px; height:18px;"> completed</p>
 
-<p> <%= link_to "Edit this task", edit_path %> </p>
+  <p> <%= link_to "✐ edit task", edit_path, class:"btn btn-primary btn-lg", style:"margin-left:670px; width: 160px;" %> </p>
 
-<p> <%= link_to "Back to list", tasks_path %> </p>
+</div>
+<%= link_to "← back to list", root_path, class:"btn btn-outline-primary btn-lg", style:"width: 160px; margin-left:263px; margin-top:20px;"%>
